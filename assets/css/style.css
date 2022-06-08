@@ -1,5 +1,6 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@100;300;400&display=swap');
+/*@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");*/
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -21,7 +22,7 @@
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: 'Poppins', sans-serif;
+  --body-font: 'Lato', sans-serif;
   --biggest-font-size: 2.25rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -64,6 +65,7 @@ html {
 }
 
 body {
+  letter-spacing: 1px;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
@@ -113,7 +115,7 @@ button {
 /*========== Variables Dark theme ==========*/
 
 body.dark-theme{
-    --first-color: hsl(228, 66%, 62%);
+  --first-color: hsl(228, 66%, 62%);
  
   --second-color: hsl(25, 57%, 53%);
   --title-color: hsl(228, 8%, 95%);
@@ -172,7 +174,7 @@ body.dark-theme{
 }
 
 .section {
-  padding: 4.5rem 0 2rem;
+    padding: 4rem 1rem 2rem 1rem;
 }
 
 .section__title {
@@ -305,7 +307,8 @@ color: var(--first-color);
     background: linear-gradient(170deg,
                 hsl(0, 0%, 22%) 0%,
                 hsl(0, 0%, 6%) 30%);
-    padding-bottom: 0;            
+    padding-bottom: 0; 
+    width: 100%;       
 }
 
 .home__container{
@@ -320,8 +323,10 @@ color: var(--first-color);
 
 .home__title{
     position: relative;
+    font-family: 'Great Vibes', cursive;
     font-size: var(--biggest-font-size);
     line-height: 120%;
+    margin-top: 1.25rem;
     margin-bottom: 1.25rem;  
     justify-items: center;
     align-items: center;
@@ -368,7 +373,7 @@ color: var(--first-color);
     justify-items: center;
     align-content: space-around;
     text-align: center;
-    margin-left: 6rem;
+    margin-left: 2rem;
     margin-bottom: 2rem;
 }
 
@@ -385,6 +390,15 @@ color: var(--first-color);
     display: flex;
     color: var(--text-color-light);
     font-size: var(--small-font-size);
+}
+
+
+.home__data{
+    margin-left: -1.5rem;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
 }
 
 .home__images{
@@ -545,12 +559,18 @@ color: var(--first-color);
     row-gap: 3rem;
 }
 
+.value__content{
+    margin-left: -1.5rem;
+}
+
+
 .value__images{
     position: relative;
     display: flex;
     justify-content: center;
     margin-top: -1.5rem;
     margin-bottom: 2rem;
+    margin-left: -1.5rem;
 }
 
 .value__orbe{
@@ -666,10 +686,16 @@ color: var(--first-color);
     row-gap: 2rem;
 }
 
+.contact__content{
+margin-left: -1.5rem;
+}
+
+
 .contact__images{
     position: relative;
     display: flex;
     justify-content: center;
+    margin-left: -1.5rem;
 }
 
 .contact__orbe{
@@ -834,8 +860,7 @@ color: var(--first-color);
 .footer__content{
     grid-template-columns: repeat(2, max-content);
     gap: 2.5rem 4rem;
-    margin-left: 6rem;
-    
+    margin-left: .5rem;
 }
 
 .footer__title{
@@ -912,7 +937,7 @@ color: var(--first-color);
     border-radius: .5rem;
 }
 
-::-webkit-scrollbar-thumb::hover{
+::-webkit-scrollbar-thumb:hover{
     background-color: hsl(228, 8%, 54%);
   
 }
@@ -950,11 +975,566 @@ color: var(--first-color);
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 
+@media screen and (max-width: 350px) {
+
+.contact__card{
+    grid-template-columns: repeat(1, 180px);
+    justify-content: center;
+  }
+
+  .home__value{
+    margin-left: 3rem;
+}
+
+}
+
+@media screen and (min-width: 375px) {
+
+    .home__data{
+        margin-left: -.5rem;
+    }
+    .home__value{
+        margin-left: 2rem;
+    }
+    .value__images{
+        margin-left: -.5rem;
+    }
+
+    .value__content{
+        margin-left: -.5rem;
+    }
+
+    .contact__images{
+        margin-left: -.5rem;
+    }
+
+    .contact__content{
+        margin-left: -.5rem;
+    }
+
+    .footer__data{
+        margin-left: -.5rem;
+    }
+
+    .footer__content{
+        margin-left: 2rem;
+    }
+    
+}
 
 /* For medium devices */
 
+@media screen and (min-width: 576px) {
+
+    .home__img{
+        width: 330px;
+        height: 330px;
+    }
+
+    .home__orbe{
+        width: 350px;
+        height: 350px;
+
+    }
+
+    .home__value{
+        margin-left: 8rem;
+    }
+
+    .logos__img img{
+        height: 80px;
+    }
+
+    .popular__card{
+        width: 320px;
+    }
+
+    .value__img{
+        width: 330px;
+        height: 330px;
+    }
+
+    .value__orbe{
+        width: 350px;
+        height: 350px;
+
+    }
+
+    .contact__img{
+        width: 330px;
+        height: 330px;
+    }
+
+    .contact__orbe{
+        width: 350px;
+        height: 350px;
+
+    }
+
+
+    .footer__data{
+        margin-left: 1rem;
+    }
+
+    .footer__content{
+        margin-left: 8rem;
+    }
+}
+
+@media  screen and (min-width: 767px){
+    .home__container{
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 2.5rem;
+    }
+
+    .search__box{
+        margin-top: 7rem;
+    }
+
+    .home__images{
+        position: absolute;
+        margin-left: 22rem;
+    }
+
+    .home__container h1{
+        width: 280px;
+        text-align: left;
+        padding-left: 3rem;
+    }
+
+    .home__container p{
+        width: 280px;
+        text-align: left;
+        padding-left: 3rem; 
+    }
+    
+    .home__container .home__search{
+        width: 650px;
+        margin-left: 3rem;
+        margin-top: 3rem;
+    }
+
+        
+    .home__value{
+        justify-items: center;
+        align-content: space-around;
+        text-align: center;
+        margin-left: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .home__value .home__value-number{
+       margin-right: -3rem;
+    }
+
+    .home__value .home__value-description{
+        margin-left: 2rem;
+    }
+
+    .popular__card{
+        width: 380px;
+    }
+
+    .value__img{
+        width: 360px;
+        height: 360px;
+    }
+
+    .value__orbe{
+        width: 380px;
+        height: 380px;
+
+    }
+
+    .contact__img{
+        width: 360px;
+        height: 360px;
+    }
+
+    .contact__orbe{
+        width: 380px;
+        height: 380px;
+
+    }
+
+    .footer__data{
+        margin-left: .5rem;
+    }
+
+
+    .footer__content{
+        grid-template-columns: repeat(4, max-content); 
+    }
+
+    .footer__content{
+        margin-left: 4.5rem;
+        margin-top: 1.5rem;
+    }
+
+}
 
 /* For large devices */
 
+@media screen and (min-width: 1023px){
+    .grid {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        justify-content: space-evenly;
+        align-content: stretch;
+    }
 
-/* For 2K & 4K resolutions */
+    .section{
+        padding: 7.5rem 3rem 3rem;
+    }
+
+    .section__title{
+        font-size: 2.25rem;
+    }
+
+    .section__subtitle{
+        font-size: var(--normal-font-size);
+    }
+
+    .nav{
+        height: calc(var(--header-height) + 1.5rem);
+    }
+
+    .nav__menu{
+        width: initial;
+        margin-left: auto;
+    }
+
+    .nav__list{
+        display: flex;
+        align-items: flex-end;
+        column-gap: 4rem;
+    }
+
+
+    .nav__link{
+        color: var(--text-color-light);
+    }
+
+    .nav__link i{
+        display: none;
+    }
+
+    .active-link{
+        background: none;
+        box-shadow: none;
+        color: var(--first-color);
+        font-weight: var(--font-medium);
+    }
+
+    .change-theme{
+        margin: 0 3rem;
+        color: var(--text-color-light);
+    }
+
+    .scroll-header .nav__link,
+    .scroll-header .change-theme{
+        color: var(--text-color);
+    }
+
+    .scroll-header .active-link{
+        color: var(--first-color);
+    }
+    .home__title{
+        margin-bottom: 3rem;
+        line-height: 25px;
+    }
+    .home__data{
+    margin-right: 5rem;
+    }
+
+    .home__container h1{
+        width: 180px;
+        line-height: 4rem;
+        font-size: 60px;
+        text-align: left;
+        margin-left: 4rem;
+    }
+
+    .home__container p{
+        width: 280px;
+        text-align: left;
+        margin-left: 4rem; 
+        font-size: 15px;
+        padding-bottom: 2rem;
+    }
+    
+    .home__container .home__search{
+        width: 850px;
+        margin-left: 2rem;
+        margin-top: 3rem;
+    }
+
+
+    .home__images{
+        margin-left: 27rem;
+    }
+
+    .home__img{
+        width: 500px;
+        height: 500px;
+    }
+
+    .home__orbe{
+        width: 520px;
+        height: 520px;
+    }
+
+    .search__box{
+    margin-left: 5rem;
+    margin-top: -1rem;
+    }
+
+
+    .home__value{
+        width: 50px;
+        display: flex;
+        column-gap: 14rem;
+        margin-top: 2rem;
+        margin-left: 2rem;
+        justify-items: center;
+        align-content: center;
+        text-align: left;
+        margin-bottom: 2rem;
+    }
+
+
+    .home__value .home__value-number{
+        margin-left:  2rem;
+        font-size: 40px;
+    }
+
+    .home__value .home__value-description{
+    margin-left: 5rem;
+    text-align: left;
+    }
+
+    .logos__container{
+        grid-template-columns: repeat(4, max-content);
+        justify-content: center;
+    }
+
+    .logos__img img{
+        height: 100px;
+    }
+    
+    .value__container,
+    .contact__container{
+        grid-template-columns: repeat(2, 1fr);
+        align-items: flex-end;
+        column-gap: 1rem;
+    }
+    
+   
+    .value__img{
+        width: 450px;
+        height: 450px;
+    }
+
+    .value__orbe{
+        width: 470px;
+        height: 470px;
+
+    }
+
+    .contact__img{
+        width: 450px;
+        height: 450px;
+    }
+
+    .contact__orbe{
+        width: 470px;
+        height: 470px;
+    }
+
+    .contact__images{
+        order: 1;
+    }
+    
+    .contact__card{
+        justify-content: initial;
+    }
+    
+    .subscribe__container{
+        padding: 3rem 8rem;
+    }
+
+    .footer__content{
+       margin-left: -2rem;
+    }
+
+}
+
+@media  screen and (min-width: 1278) {
+
+   
+    .home__container{
+        grid-template-columns: 5rem;
+    }
+
+    .home__container h1{
+        margin-left: 8rem;
+    }
+
+    .home__container p{
+        margin-left: 8rem;
+    }
+    
+    .home__images{
+        margin-left: 40rem;
+    }
+
+    .popular__card{
+        width: 320px;
+        padding: .75rem .75rem 2rem;
+    }
+    
+    .popular__data{
+        padding: 0 .25rem 0 .75rem
+    }
+    
+    .value__container
+    .contact__container{
+        align-items: flex-start;
+        column-gap: 5rem;
+    }
+    
+    .value__description
+    .contact__description{
+        font-size: var(--normal-font-size);
+        margin-bottom: 2.5rem;
+    }
+    
+    .value__accordion-title{
+        font-size: var(--normal-font-size);
+    }
+    
+    .value__accordion-item{
+        padding: 1.25rem 1.25rem 1.25rem 1rem;
+    }
+    
+    .value__accordion-description{
+        padding-bottom: 1rem;
+        font-size: var(--small-font-size);
+    }
+    
+    .contact__card{
+        grid-template-columns: repeat(2, 200px);
+    }
+    
+    .contact__card-box{
+        padding: 28px 1.5rem 1.5rem;
+    }
+    
+    .subscribe__container{
+        padding: 4rem 10rem 4.5rem;
+        border-radius: 2rem;
+        border: 12px solid var(--first-color-light);
+    }
+    
+    .subscribe__title{
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .subscribe__description{
+        font-size: var(--normal-font-size);
+        padding: 0 8rem;
+    }
+    
+    .subscribe__button{
+        font-size: var(--normal-font-size);
+    }
+
+    .footer__content{
+       margin-left: 20rem;
+    }
+    
+    .footer__title{
+        margin-bottom: 1.5rem;
+    }
+    
+    .footer__links{
+        row-gap: 1rem;
+    }
+    
+    .footer__info{
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 2rem;
+    }
+    
+    .show-scroll{
+        bottom: 3rem;
+        right: 3rem;
+    }
+    
+    
+}
+
+
+
+/* For 2K & 4K resolutions 
+.search__box{
+   
+    }
+
+
+    .home__value{
+      
+    }
+
+
+    .home__value .home__value-number{
+       
+    }
+
+    .home__value .home__value-description{
+   
+    }
+
+    .logos__container{
+       
+    }
+
+
+    .value__img{
+       
+    }
+
+    .value__orbe{
+       
+
+    }
+
+    .contact__img{
+       
+    }
+
+    .contact__orbe{
+       
+
+    }
+
+*/
+
+/* For 2K and 4K resolutions 
+
+@media screen and (min-width: 2048px){
+    body{
+        zoom: 1.5;
+    }
+}
+
+@media screen and (min-width: 3840px){
+    body{
+        zoom: 2;
+    }
+}
+
+@media screen and (*/
