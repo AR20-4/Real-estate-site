@@ -1,4 +1,4 @@
-## real-estate-site
+## Website for Real Estate Company
 This project entails creating a modern, visually appealing website for a real estate company, designed to showcase property listings and engage potential buyers. The site will leverage a clean design and robust functionality, ensuring an optimal user experience across devices.
 
 ## Objectives
