@@ -129,8 +129,8 @@ body.dark-theme{
 
 
 /*========== 
-    Color changes in some parts of 
-    the website, in dark theme 
+    Color changes for some parts of 
+    the website, dark theme 
 ==========*/
 
 .dark-theme .home__search{
@@ -1095,13 +1095,23 @@ margin-left: -1.5rem;
         padding-top: 2.5rem;
     }
 
+    .home__title{
+        margin-right: 15rem;
+        padding-right: .5rem;
+          
+    }
+    .home__description{
+        margin-right: 15rem;
+       padding-right: 2rem;
+    }
+
     .search__box{
         margin-top: 7rem;
     }
 
     .home__images{
         position: absolute;
-        margin-left: 22rem;
+        margin-left: 25rem;
     }
 
     .home__container h1{
@@ -1249,8 +1259,12 @@ margin-left: -1.5rem;
         color: var(--first-color);
     }
     .home__title{
+        margin-right: 35rem;
         margin-bottom: 3rem;
         line-height: 25px;
+    }
+    .home__description{
+        margin-right: 30rem;
     }
     .home__data{
     margin-right: 5rem;
